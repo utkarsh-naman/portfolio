@@ -1,10 +1,10 @@
 @font-face {
   font-family: pixel;
-  src: url("../../gen-res/font/dogicapixel.ttf");
+  src: url("../res/font/dogicapixel.ttf");
 }
 @font-face {
   font-family: blacklist;
-  src: url("../../gen-res/font/Blacklisted.ttf");
+  src: url("../res/font/Blacklisted.ttf");
 }
 @font-face {
   font-family: typoround;
