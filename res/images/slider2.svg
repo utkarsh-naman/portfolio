@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	x="0px" y="0px"
+	width="24.0px" height="24.0px"
+	viewBox="0 0 24.0 24.0"
+	enable-background="new 0 0 24.0 24.0"
+	xml:space="preserve">
+	<path
+		fill="#8E8F94"
+		stroke="#8E8F94"
+		fill-opacity="1.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.072"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M11.11,13.87L19.86,13.88C19.86,10.48,18.24,8.06,15.38,6.91L11.11,6.91L11.11,13.87z"/>
+	<path
+		fill="#8E8F94"
+		stroke="#FF00A5"
+		fill-opacity="1.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.0"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M14.92,16.88C18.02,16.88,20.53,17.29,20.53,17.80C20.53,18.31,18.02,18.72,14.92,18.72C11.82,18.72,9.31,18.31,9.31,17.80C9.31,17.29,11.82,16.88,14.92,16.88z"/>
+	<path
+		fill="#737476"
+		stroke="#737476"
+		fill-opacity="1.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.072"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M11.11,10.81L13.17,10.81L13.17,13.87L11.11,13.87z"/>
+	<path
+		fill="#323338"
+		stroke="#323338"
+		fill-opacity="1.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.12"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M11.71,11.14C12.70,12.78,15.50,12.34,15.48,10.25L15.50,7.07C15.50,6.71,15.08,5.76,14.10,5.64L11.70,5.61L11.71,11.14z"/>
+	<path
+		fill="#4F5052"
+		stroke="#8A00FF"
+		fill-opacity="1.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.0"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M12.72,13.83L15.29,13.83L15.29,17.03L12.72,17.03z"/>
+	<path
+		fill="#333439"
+		stroke="#333439"
+		fill-opacity="1.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.072"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M19.86,13.88C19.92,16.04,18.84,17.89,16.97,17.94L13.17,17.93C13.09,15.30,14.01,14.21,14.99,13.86L19.86,13.88z"/>
+	<path
+		fill="#333439"
+		stroke="#333439"
+		fill-opacity="1.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.072"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M13.11,17.93L11.42,17.91C10.58,17.80,10.03,16.04,11.11,15.12L11.11,14.07L11.11,13.87L13.17,13.87L13.11,17.93z"/>
+	<path
+		fill="#737476"
+		stroke="#737476"
+		fill-opacity="1.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.12"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M11.71,12.17L11.69,5.61C8.82,5.41,8.10,6.75,8.14,7.68L8.13,10.42C8.06,11.44,6.48,11.67,6.12,10.34C5.89,9.48,6.48,8.91,7.13,8.83C6.88,8.04,6.16,7.55,5.47,7.33C4.17,8.57,3.69,10.68,4.53,12.03C5.63,13.84,8.63,15.12,10.68,12.17L11.71,12.17z"/>
+	<path
+		fill="#000000"
+		stroke="#000000"
+		fill-opacity="1.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.019983556"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M10.31,8.93C10.47,8.93,10.60,9.06,10.60,9.22C10.60,9.39,10.47,9.52,10.31,9.52C10.14,9.52,10.01,9.39,10.01,9.22C10.01,9.06,10.14,8.93,10.31,8.93z"/> 
+
+	<text 
+		font-size="0.02603418"
+		font-family="default"
+		fill="#363636"
+		stroke-width="0"
+		fill-opacity="1.000"
+		text-anchor="start"
+  		transform="rotate(-0.0 12.763378 13.962487) scale(1.3851526 1.0)" >
+
+		<tspan x="9.05292" y="13.972488">I don't know why I made this</tspan>
+	</text>
+</svg>
