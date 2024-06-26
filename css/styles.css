@@ -526,9 +526,12 @@ body{
   animation: autoRun 10s linear infinite;
   transition: filter 0.5s;
   animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) )!important;
+  display: flex;
+  align-items: center;
 }
 .slider .list .item img{
-  width: 100%;
+  height: 170px;
+  pointer-events: none;
 }
 @keyframes autoRun{
   from{
