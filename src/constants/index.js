@@ -39,39 +39,52 @@ const dockApps = [
     {
         id: "finder",
         name: "Portfolio", // was "Finder"
-        icon: "finder.png",
+        icon: "/applogos/finder.png",
         canOpen: true,
     },
     {
         id: "safari",
         name: "Articles", // was "Safari"
-        icon: "safari.png",
+        icon: "/applogos/safari.png",
         canOpen: true,
     },
     {
         id: "photos",
         name: "Gallery", // was "Photos"
-        icon: "photos.png",
+        icon: "/applogos/photos.png",
         canOpen: true,
     },
     {
         id: "contact",
         name: "Contact", // or "Get in touch"
-        icon: "contact.png",
+        icon: "/applogos/contacts.png",
+        canOpen: true,
+    },
+    {
+        id: "notes",
+        name: "Note", // or "Get in touch"
+        icon: "/applogos/notes.png",
         canOpen: true,
     },
     {
         id: "terminal",
         name: "Skills", // was "Terminal"
-        icon: "terminal.png",
+        icon: "/applogos/terminal.png",
         canOpen: true,
+    },
+    {
+        id: "settings",
+        name: "Settings", // was "Trash"
+        icon: "/applogos/settings.png",
+        canOpen: false,
     },
     {
         id: "trash",
         name: "Archive", // was "Trash"
-        icon: "trash.png",
+        icon: "/applogos/trash.png",
         canOpen: false,
     },
+
 ];
 
 const blogPosts = [

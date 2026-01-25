@@ -1,15 +1,5 @@
-// import {Navbar} from "#components";
-// const App = () => {
-//     return (
-//         <main>
-//             <Navbar/>
-//         </main>
-//     );
-// };
-// export default App
-
 import {useEffect, useState} from "react";
-import { Navbar } from "#components";
+import { Navbar, Dock } from "#components";
 import BootScreen from "./components/BootScreen";
 
 import { audioUnlocked } from "./hooks/useAudioUnlock";
@@ -22,8 +12,8 @@ const App = () => {
     useEffect(() => {
         if (!booted || !audioUnlocked) return;
 
-        const audio = new Audio("/boot/boot-sound.mp3");
-        audio.volume = 0.6;
+        const audio = new Audio("/boot/boot-sound-tiny.mp3");
+        audio.volume = 0.3;
         audio.play().catch(() => {});
     }, [booted]);
 
@@ -35,6 +25,7 @@ const App = () => {
             {booted && (
                 <main>
                     <Navbar/>
+                    <Dock/>
                 </main>
             )}
         </>

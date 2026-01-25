@@ -7,7 +7,7 @@ body {
     width: 100dvw;
     overflow: hidden;
     height: 100dvh;
-    background-image: url("../public/wallpaper/macos-sonoma-3840x2160-11577.jpeg");
+    background-image: url("../public/wallpaper/vector-art-colorful-3840x2160-12144.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -123,7 +123,7 @@ body {
         }
 
         .tooltip {
-            @apply !py-1 !px-3 !w-fit !text-center !text-xs !rounded-md !bg-blue-200 !text-blue-900 !shadow-2xl;
+            @apply !py-1 !px-3 !w-fit !text-center !text-xs !rounded-md !bg-white !text-gray-600  !shadow-2xl;
         }
 
         .dock-icon {
