@@ -30,7 +30,7 @@ const BootScreen = ({ onFinish }) => {
 
 
     return (
-        <div className="boot-screen">
+        <div className={`boot-screen ${phase === "welcome" ? "boot-welcome" : ""}`}>
             {phase === "apple" && (
                 <img
                     src="/boot/apple.svg"

@@ -13,6 +13,22 @@ body {
     background-position: center;
 }
 
+:root {
+    --window-color: #ffffff;
+    --theme-text-color: #111111;
+}
+
+[data-theme="dark"] {
+    --window-color: #111111;
+    --theme-text-color: #ffffff;
+    --tooltip-color: #111111;
+}
+[data-theme="light"] {
+    --window-color: #ffffff;
+    --theme-text-color: #111111;
+    --tooltip-color: #ffffff;
+}
+
 /* ===== macOS Boot Screen ===== */
 
 .boot-screen {
@@ -29,6 +45,35 @@ body {
     width: 90px;
     opacity: 0.3;
     animation: appleGlow 2.2s ease-in forwards;
+}
+
+/* ===== macOS Welcome Background ===== */
+
+.boot-welcome {
+    background-image: url("../public/wallpaper/vector-art-colorful-3840x2160-12144.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.boot-welcome::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.boot-screen > * {
+    position: relative;
+    z-index: 1;
+}
+
+.terminal-body {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 @keyframes appleGlow {
@@ -200,7 +245,10 @@ body {
     }
 
     #terminal {
-        @apply w-xl absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+        @apply w-xl absolute top-32 left-1/12 bg-[var(--window-color)] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
+
+        min-height: 320px;
+        max-height: 70vh;
 
         h2 {
             @apply font-bold text-sm text-center w-full;
