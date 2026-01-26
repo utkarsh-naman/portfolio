@@ -1,3 +1,5 @@
+import {TERMINAL_COMMANDS} from "#constants/terminal_commands.js";
+
 const navLinks = [
     {
         id: 1,
@@ -76,13 +78,13 @@ const dockApps = [
         id: "settings",
         name: "Settings", // was "Trash"
         icon: "/applogos/settings.png",
-        canOpen: false,
+        canOpen: true,
     },
     {
         id: "trash",
         name: "Archive", // was "Trash"
         icon: "/applogos/trash.png",
-        canOpen: false,
+        canOpen: true,
     },
 
 ];
@@ -507,13 +509,16 @@ const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
     finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    notes: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    settings: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    trash: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
-export { INITIAL_Z_INDEX, WINDOW_CONFIG };
+export { INITIAL_Z_INDEX, WINDOW_CONFIG, TERMINAL_COMMANDS };

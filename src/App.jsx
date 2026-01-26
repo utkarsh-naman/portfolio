@@ -1,8 +1,13 @@
+import gsap from "gsap";
+import {Draggable} from "gsap/Draggable";
+gsap.registerPlugin(Draggable);
 import {useEffect, useState} from "react";
-import { Navbar, Dock } from "#components";
-import BootScreen from "./components/BootScreen";
 
+
+import BootScreen from "./components/BootScreen";
 import { audioUnlocked } from "./hooks/useAudioUnlock";
+import { Navbar, Dock } from "#components";
+import { Terminal } from "#windows";
 
 
 
@@ -26,6 +31,7 @@ const App = () => {
                 <main>
                     <Navbar/>
                     <Dock/>
+                    <Terminal/>
                 </main>
             )}
         </>
