@@ -50,10 +50,15 @@ body {
 /* ===== macOS Welcome Background ===== */
 
 .boot-welcome {
-    background-image: url("../public/wallpaper/vector-art-colorful-3840x2160-12144.jpg");
+    /*background-image: url("../public/wallpaper/vector-art-colorful-3840x2160-12144.jpg");*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    background-image: url("/wallpaper/vector-art-colorful-3840x2160-12144.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .boot-welcome::before {
@@ -63,6 +68,7 @@ body {
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
     background: rgba(0, 0, 0, 0.35);
+    z-index: 0;
 }
 
 .boot-screen > * {
