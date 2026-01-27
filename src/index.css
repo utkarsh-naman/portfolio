@@ -29,8 +29,57 @@ body {
     --tooltip-color: #ffffff;
 }
 
-/* ===== macOS Boot Screen ===== */
+/*!* ===== macOS Boot Screen ===== *!*/
 
+/*.boot-screen {*/
+/*    position: fixed;*/
+/*    inset: 0;*/
+/*    background: black;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    z-index: 9999;*/
+/*}*/
+
+/*.apple-boot {*/
+/*    width: 90px;*/
+/*    opacity: 0.3;*/
+/*    animation: appleGlow 2.2s ease-in forwards;*/
+/*}*/
+
+/*!* ===== macOS Welcome Background ===== *!*/
+
+/*.boot-welcome {*/
+/*    !*background-image: url("../public/wallpaper/vector-art-colorful-3840x2160-12144.jpg");*!*/
+/*    !*background-size: cover;*!*/
+/*    !*background-position: center;*!*/
+/*    !*background-repeat: no-repeat;*!*/
+/*    background-image: url("/wallpaper/vector-art-colorful-3840x2160-12144.jpg");*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.boot-welcome::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    inset: 0;*/
+/*    backdrop-filter: blur(50px);*/
+/*    -webkit-backdrop-filter: blur(50px);*/
+/*    background: rgba(0, 0, 0, 0.35);*/
+/*    z-index: 0;*/
+/*}*/
+
+/*.boot-screen > * {*/
+/*    position: relative;*/
+/*    z-index: 1;*/
+/*}*/
+
+
+
+
+/* Boot screen */
 .boot-screen {
     position: fixed;
     inset: 0;
@@ -47,40 +96,74 @@ body {
     animation: appleGlow 2.2s ease-in forwards;
 }
 
-/* ===== macOS Welcome Background ===== */
+/* Welcome screen */
+.welcome-screen {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: 9998;
+}
 
-.boot-welcome {
-    /*background-image: url("../public/wallpaper/vector-art-colorful-3840x2160-12144.jpg");*/
-    /*background-size: cover;*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
+/* 🔥 Stable, non-glitching blur */
+.welcome-bg {
+    position: absolute;
+    inset: -40px; /* extra bleed for blur */
     background-image: url("/wallpaper/vector-art-colorful-3840x2160-12144.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
+
+
+    filter: blur(45px);
+    transform: scale(1.15) translateZ(0);
+    will-change: transform;
+
+
+    pointer-events: none;
+    contain: paint; /* CRITICAL */
 }
 
-.boot-welcome::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
-    background: rgba(0, 0, 0, 0.35);
-    z-index: 0;
-}
-
-.boot-screen > * {
+/* content above blur */
+.welcome-content {
     position: relative;
     z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .terminal-body {
     flex: 1;
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+
+
+
+
+
+
+
 
 @keyframes appleGlow {
     0% {
