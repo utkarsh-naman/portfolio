@@ -127,6 +127,7 @@ export function useTerminalEngine() {
 
         if (!TERMINAL_COMMANDS[command]) {
             push(`zsh: command not found: ${command}`);
+            push(`try: \`help\``);
             return;
         }
 
@@ -197,12 +198,10 @@ export function useTerminalEngine() {
                 const uptime = formatUptime(getUptimeSeconds());
                 const theme = document.documentElement.dataset.theme || "light";
 
-                push("      ██████╗ ███████╗");
-                push("      ██╔══██╗██╔════╝");
-                push("      ██████╔╝███████╗");
-                push("      ██╔══██╗╚════██║");
-                push("      ██████╔╝███████║");
-                push("      ╚═════╝ ╚══════╝");
+                push("      ██║   ██║██████║");
+                push("      ██║   ██║██║\t██║");
+                push("      ██║   ██║██║\t██║");
+                push("       ██████  ██║\t██║");
                 push("");
                 push(`OS: macOS (portfolioOS 😄)`);
                 push(`Host: trafficUser`);
