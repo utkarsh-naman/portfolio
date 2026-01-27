@@ -460,7 +460,7 @@ const RESUME_LOCATION = {
     children: [
         {
             id: 1,
-            name: "Resume.pdf",
+            name: "resume.pdf",
             icon: "/images/pdf.png",
             kind: "file",
             fileType: "pdf",

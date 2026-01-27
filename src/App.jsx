@@ -3,7 +3,7 @@ import BootScreen from "./components/BootScreen";
 import WelcomeScreen from "./components/WelcomeScreen";
 import { audioUnlocked } from "./hooks/useAudioUnlock";
 import { Navbar, Dock } from "#components";
-import {Safari, Terminal} from "#windows";
+import {Safari, Terminal, Resume} from "#windows";
 
 const App = () => {
     const [stage, setStage] = useState("boot");
@@ -35,6 +35,7 @@ const App = () => {
                     <Dock />
                     <Terminal />
                     <Safari />
+                    <Resume />
                 </main>
             )}
         </>

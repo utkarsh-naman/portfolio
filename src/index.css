@@ -304,12 +304,13 @@ body {
     }
 
     #window-header {
-        @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
+        @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400 relative z-10;
     }
 
     #safari {
         @apply w-[70vw] absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
         min-width: 50vw;
+        min-height: 50vh;
         max-height: 100vh;
 
         .search {
@@ -462,14 +463,30 @@ body {
     }
 
     #resume {
-        @apply w-fit h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+        @apply absolute bg-[var(--window-color)] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col ;
 
-        #window-header {
-            h2 {
-                @apply font-bold text-sm text-center flex-1;
-            }
-        }
+        min-width: 35vw;
+        min-height: 40vh;
+        max-height: 100vh;
+
+        width: 50vw;
+        height: 80vh;
     }
+
+    /* 👇 THIS is the key */
+    #resume .resume-body {
+        @apply flex justify-center;
+        flex: 1;
+        overflow-x: auto;
+        overflow-y: auto;
+        touch-action: none; /* 🔑 allow GSAP to receive drag */
+        overscroll-behavior: contain;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0,0,0,0.2) transparent;
+        padding: 1rem;
+    }
+
+
 
     #finder {
         @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
