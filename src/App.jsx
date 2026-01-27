@@ -52,9 +52,11 @@ import { Terminal } from "#windows";
 const App = () => {
     const [stage, setStage] = useState("boot");
 
-    // 🔊 Play boot sound ONCE after boot finishes
+    // play audio on desktop
     useEffect(() => {
-        if (stage !== "welcome" || !audioUnlocked) return;
+        if (stage !== "desktop") return;
+        if (!audioUnlocked) return;
+
 
         const audio = new Audio("/boot/boot-sound-tiny.mp3");
         audio.volume = 0.3;

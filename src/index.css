@@ -105,31 +105,49 @@ body {
 }
 
 /* 🔥 Stable, non-glitching blur */
+/* Root container */
+.welcome-screen {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    background: black;
+}
+
+/* 🔥 Blur painter — isolated */
 .welcome-bg {
     position: absolute;
-    inset: -40px; /* extra bleed for blur */
+    inset: -40px;
     background-image: url("/wallpaper/vector-art-colorful-3840x2160-12144.jpg");
     background-size: cover;
     background-position: center;
-
 
     filter: blur(45px);
     transform: scale(1.15) translateZ(0);
     will-change: transform;
 
-
+    contain: paint;          /* CRITICAL */
     pointer-events: none;
-    contain: paint; /* CRITICAL */
 }
 
-/* content above blur */
-.welcome-content {
-    position: relative;
+/* Overlay that does NOT resize content */
+.welcome-overlay {
+    position: fixed;         /* <- important */
+    inset: 0;
     z-index: 1;
-    height: 100%;
-    display: flex;
+
+    display: grid;
+    place-items: center;
     align-items: center;
     justify-content: center;
+}
+
+/* 🔒 Lock Lottie size */
+.welcome-lottie {
+    /*width: 420px;            !* fixed logical size *!*/
+    /*max-width: 80vw;         !* responsive clamp *!*/
+    /*aspect-ratio: 1 / 1;*/
+    width: 100%;
+    contain: layout paint;   /* prevents resize jitter */
 }
 
 
