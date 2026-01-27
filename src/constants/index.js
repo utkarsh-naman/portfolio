@@ -70,7 +70,7 @@ const dockApps = [
     },
     {
         id: "terminal",
-        name: "Skills", // was "Terminal"
+        name: "Terminal", // was "Terminal"
         icon: "/applogos/terminal.png",
         canOpen: true,
     },
@@ -508,17 +508,17 @@ export const locations = {
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
-    finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    notes: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    settings: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    trash: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    finder: { isOpen: false, isMaximized: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+    safari: { isOpen: false, isMaximized: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+    photos: { isOpen: false, isMaximized: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+    contact: { isOpen: false, isMaximized: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+    notes: { isOpen: false, isMaximized: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+    terminal: { isOpen: false, isMaximized: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+    settings: { isOpen: false, isMaximized: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+    trash: { isOpen: false, isMaximized: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+    resume: { isOpen: false, isMaximized: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+    txtfile: { isOpen: false, isMaximized: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+    imgfile: { isOpen: false, isMaximized: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG, TERMINAL_COMMANDS };

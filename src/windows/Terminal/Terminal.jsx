@@ -1,6 +1,7 @@
 import WindowWrapper from "#hoc/WindowWrapper.jsx";
 import { useTerminalEngine } from "./useTerminalEngine";
 import { useState, useRef, useEffect } from "react";
+import WindowControl from "#components/WindowControl.jsx";
 
 const Terminal = () => {
     const inputRef = useRef(null);
@@ -69,7 +70,7 @@ const Terminal = () => {
     return (
         <>
             <div id="window-header">
-                <p>Terminal</p>
+                <WindowControl target={"terminal"}/>
                 <h2>zsh</h2>
             </div>
 

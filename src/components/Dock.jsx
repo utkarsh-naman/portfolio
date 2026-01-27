@@ -9,7 +9,7 @@ import useWindowStore from "#store/window.js";
 
 
 const Dock = () => {
-    const {openWindow, closeWindow, windows} = useWindowStore();
+    const {openWindow, closeWindow, minimizeWindow, windows} = useWindowStore();
 
     const dockRef = useRef(null);
 
@@ -63,7 +63,7 @@ const Dock = () => {
         const window = windows[app.id];
 
         if (window.isOpen){
-            closeWindow(app.id);
+            minimizeWindow(app.id);
         } else{
             openWindow(app.id);
         }
