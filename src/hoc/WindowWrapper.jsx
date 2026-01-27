@@ -24,13 +24,21 @@ const WindowWrapper = (Component, windowKey) => {
         // ----------------------------------------------------
         // 1. OPENING LOGIC
         // ----------------------------------------------------
+        // ----------------------------------------------------
+// 1. OPENING LOGIC
+// ----------------------------------------------------
         useGSAP(() => {
             const el = ref.current;
             if (!el || !isOpen) return;
 
+            // 🔥 FIX: bring to front on first open
+            focusWindow(windowKey);
+
             if (!isMinimized) {
                 gsap.set(el, { clearProps: "all" });
-                preMaximizeState.current = { x: 0, y: 0, width: 0, height: 0, top: 0, left: 0 };
+                preMaximizeState.current = {
+                    x: 0, y: 0, width: 0, height: 0, top: 0, left: 0
+                };
             }
 
             if (draggableInstance.current) {
@@ -38,12 +46,12 @@ const WindowWrapper = (Component, windowKey) => {
             }
 
             el.style.display = "flex";
-            gsap.fromTo(el,
+            gsap.fromTo(
+                el,
                 { scale: 0.8, opacity: 0, y: 40 },
                 { scale: 1, opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }
             );
         }, [isOpen]);
-
         // ----------------------------------------------------
         // 2. DRAGGABLE LOGIC (Snap-to-Restore)
         // ----------------------------------------------------
@@ -54,33 +62,40 @@ const WindowWrapper = (Component, windowKey) => {
             const [instance] = Draggable.create(el, {
                 trigger: el.querySelector("#window-header"),
                 allowEventDefault: true,
+                dragClickables: false,
+                minimumMovement: 6, // 🔥 key line
+
                 onPress: function () {
                     focusWindow(windowKey);
+                    // ❌ do NOT restore here
+                },
 
-                    if (isMaximizedRef.current) {
-                        isRestoringByDragRef.current = true;
-                        maximizeWindow(windowKey);
+                onDragStart: function () {
+                    if (!isMaximizedRef.current) return;
 
-                        const restoreWidth = preMaximizeState.current.width || 800;
-                        const restoreHeight = preMaximizeState.current.height || 600;
-                        const newX = this.pointerX - (restoreWidth / 2);
+                    isRestoringByDragRef.current = true;
+                    maximizeWindow(windowKey);
 
-                        gsap.set(el, {
-                            width: restoreWidth,
-                            height: restoreHeight,
-                            x: newX,
-                            y: 0,
-                            borderRadius: "0.75rem"
-                        });
-                        this.update();
-                    }
+                    const restoreWidth = preMaximizeState.current.width || 800;
+                    const restoreHeight = preMaximizeState.current.height || 600;
+
+                    const newX = this.pointerX - restoreWidth / 2;
+
+                    gsap.set(el, {
+                        width: restoreWidth,
+                        height: restoreHeight,
+                        x: newX,
+                        y: 0,
+                        borderRadius: "0.75rem"
+                    });
+
+                    this.update();
                 }
             });
 
             draggableInstance.current = instance;
             return () => instance.kill();
         }, []);
-
         // ----------------------------------------------------
         // 3. RESIZE LOGIC (Fixed)
         // ----------------------------------------------------

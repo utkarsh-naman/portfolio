@@ -3,5 +3,6 @@
 // export {Terminal};
 
 import Terminal from "#windows/Terminal/Terminal.jsx"
+import Safari from "#windows/Safari/Safari.jsx";
 
-export {Terminal};
+export {Terminal, Safari};
