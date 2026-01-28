@@ -62,12 +62,12 @@ const dockApps = [
         icon: "/applogos/contacts.png",
         canOpen: true,
     },
-    {
-        id: "notes",
-        name: "Note", // or "Get in touch"
-        icon: "/applogos/notes.png",
-        canOpen: true,
-    },
+    // {
+    //     id: "notes",
+    //     name: "Note", // or "Get in touch"
+    //     icon: "/applogos/notes.png",
+    //     canOpen: true,
+    // },
     {
         id: "terminal",
         name: "Terminal", // was "Terminal"
@@ -82,7 +82,7 @@ const dockApps = [
     },
     {
         id: "trash",
-        name: "Archive", // was "Trash"
+        name: "Trash", // was "Trash"
         icon: "/applogos/trash.png",
         canOpen: true,
     },

@@ -7,6 +7,8 @@ import {Tooltip} from "react-tooltip";
 import {dockApps} from "#constants/index.js";
 import useWindowStore from "#store/window.js";
 
+import { locations } from "#constants/index.js";
+import useLocationStore from "#store/location.js";
 
 const Dock = () => {
     const {openWindow, closeWindow, minimizeWindow, windows} = useWindowStore();
@@ -59,6 +61,12 @@ const Dock = () => {
 
     const toggleApp = (app) => {
         if (!app.canOpen) return;
+
+
+        if (app.id === "trash") {
+            openWindow("finder", { location: "trash" });
+            return;
+        }
 
         const window = windows[app.id];
 

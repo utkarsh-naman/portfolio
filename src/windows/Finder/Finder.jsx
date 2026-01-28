@@ -6,10 +6,25 @@ import {locations} from "#constants/index.js";
 import useLocationStore from "#store/location.js";
 import clsx from "clsx";
 import useWindowStore from "#store/window.js";
+import {useEffect} from "react";
 
 const Finder = () => {
     const {openWindow} = useWindowStore();
     const {activeLocation, setActiveLocation} = useLocationStore();
+
+    const { windows } = useWindowStore();
+    const finderWindow = windows.finder;
+    useEffect(() => {
+        if (!finderWindow?.data?.location) return;
+
+        const locKey = finderWindow.data.location;
+        const loc = locations[locKey];
+
+        if (loc) {
+            setActiveLocation(loc);
+        }
+    }, [finderWindow?.data]);
+
 
     const openItem = (item) => {
         if(item.fileType === "pdf") return openWindow("resume");

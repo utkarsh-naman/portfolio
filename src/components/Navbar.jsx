@@ -3,6 +3,8 @@ import dayjs from "dayjs";
 
 import { navIcons, navLinks } from "#constants/index.js";
 import useWindowStore from "#store/window.js";
+import { locations } from "#constants/index.js";
+
 
 const Navbar = () => {
     const [time, setTime] = useState(dayjs());
@@ -24,7 +26,19 @@ const Navbar = () => {
 
                 <ul>
                     {navLinks.map(({ id, name, type }) => (
-                        <li key={id} onClick={()=>openWindow(type)}>
+                        <li
+                            key={id}
+                            onClick={() => {
+                                // Projects → Finder at Projects
+                                if (name === "Projects") {
+                                    openWindow("finder", { location: "work" });
+                                    return;
+                                }
+
+                                // default behavior
+                                openWindow(type);
+                            }}
+                        >
                             <p>{name}</p>
                         </li>
                     ))}
