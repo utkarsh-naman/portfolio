@@ -329,9 +329,10 @@ body {
     #terminal {
         @apply w-xl absolute top-32 left-1/12 bg-[var(--window-color)] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
 
-        min-height: 45vw;
+        min-height: 45vh;
         max-height: 100vh;
         min-width: 30vw;
+        height: 45vh;
 
         h2 {
             @apply font-bold text-sm text-center w-full;
