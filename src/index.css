@@ -564,16 +564,23 @@ body {
 
 
     #txtfile {
-        @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
+        @apply w-md absolute top-36 left-[50vh]  bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
 
+        height: 60vh;
         h2 {
             @apply font-bold text-sm text-center w-full;
         }
     }
 
+    #txtfile .txt-body{
+        overflow: auto;
+        overscroll-behavior: contain;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0,0,0,0.1) transparent;
+    }
     #imgfile {
-        @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-
+        @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
+        overflow: hidden;
         #window-header {
             p {
                 @apply font-bold text-[#5f6266];
@@ -581,6 +588,7 @@ body {
         }
 
         .preview {
+            overflow: auto;
             @apply p-2 bg-gray-200 max-h-[70vh];
 
             img {

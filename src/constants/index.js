@@ -240,7 +240,7 @@ const WORK_LOCATION = {
     children: [
         // ▶ Project 1
         {
-            id: 5,
+            id: 6,
             name: "Unc",
             icon: "/images/folder.png",
             kind: "folder",
@@ -257,10 +257,11 @@ const WORK_LOCATION = {
                     fileType: "txt",
                     // position: "top-5 left-10",
                     description: [
-                        "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-                        "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-                        "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-                        "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+                        "Unc is a WASM (Web-Assembly) compatible engine-enabled Chopsticks (hand game) gamebot project built on C++. ",
+                        "Unc is the project which is dearest to me cuz hell nawh I spent months understanding the game, starting with pen and paper to code, studied Graphs just to understand maps and what not.",
+                        "I did not just solve it, I solved it optimally.",
+                        "It is a no loss gamebot meaning you can never defeat it.",
+                        "I boosted my C++ skills and cherry on top, learned the Mathematics behind the graph, limitations of MiniMax and then created my own algorithm which is self-proclaimed to be called as MaxiMax",
                     ],
                 },
                 {
@@ -298,7 +299,7 @@ const WORK_LOCATION = {
 
         // ▶ Project 2
         {
-            id: 6,
+            id: 7,
             name: "utnampython",
             icon: "/images/folder.png",
             kind: "folder",
@@ -315,10 +316,10 @@ const WORK_LOCATION = {
                     fileType: "txt",
                     // position: "top-5 right-10",
                     description: [
-                        "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-                        "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-                        "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-                        "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
+                        "utnampython: My own custom variant of standard python the programming language, cpython. Cuz, why not?",
+                        "Includes 17+ sorting algorithms to choose from",
+                        "TTE: text-to-expression that converts text expressions into python code equiavent. eg 2*pilne becomes 2*math.pi*math.ln(e)",
+                        "Built on c and python",
                     ],
                 },
                 {
@@ -356,7 +357,7 @@ const WORK_LOCATION = {
 
         // ▶ Project 3
         {
-            id: 7,
+            id: 8,
             name: "3T",
             icon: "/images/folder.png",
             kind: "folder",
@@ -373,10 +374,10 @@ const WORK_LOCATION = {
                     fileType: "txt",
                     // position: "top-5 left-10",
                     description: [
-                        "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-                        "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-                        "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-                        "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+                        "3T: A tic-tac-toe WASM compatible gamebot written in golang.",
+                        "Generated the complete graph of the game, reduced the symmetrical states into one canonical state",
+                        "Efficient backtracking score setting using own algorithm: variant of MiniMax",
+                        "It is a highly thought resource and computationally optimized tic-tac-toe bot with highly detailed ready to follow documentation that you will ever find.",
                     ],
                 },
                 {
@@ -430,27 +431,27 @@ const ABOUT_LOCATION = {
             changePermission: "denied",
             fileType: "img",
             // position: "top-10 left-5",
-            imageUrl: "/images/adrian.jpg",
+            imageUrl: "/meimg/firing.png",
         },
         {
             id: 2,
-            name: "casual-firing.png",
+            name: "me-n-friends.png",
             icon: "/images/image.png",
             kind: "file",
             changePermission: "denied",
             fileType: "img",
             // position: "top-28 right-72",
-            imageUrl: "/images/adrian-2.jpg",
+            imageUrl: "/meimg/me-n-friends.png",
         },
         {
             id: 3,
-            name: "conference-firing.png",
+            name: "crush.png",
             icon: "/images/image.png",
             kind: "file",
             changePermission: "denied",
             fileType: "img",
             // position: "top-52 left-80",
-            imageUrl: "/images/adrian-3.jpeg",
+            imageUrl: "/meimg/crush.jpg",
         },
         {
             id: 4,
@@ -460,13 +461,13 @@ const ABOUT_LOCATION = {
             changePermission: "denied",
             fileType: "txt",
             // position: "top-60 left-5",
-            subtitle: "Meet the Developer Behind the Code",
-            image: "/images/adrian.jpg",
+            subtitle: "Yo! found me huh?",
+            image: "/meimg/img.png",
             description: [
-                "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-                "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-                "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-                "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+                "I am Utkarsh Naman aka UtNam",
+                "I solve problems that either bug me or I wonder how was it implemented.",
+                "Loves optimization, especially resource optimization to improve backend health and lower the server costs",
+                "Am rarely seen outside my house. ",
             ],
         },
     ],
@@ -493,8 +494,72 @@ const RESUME_LOCATION = {
     ],
 };
 
-const TRASH_LOCATION = {
+
+const ART_LOCATION = {
     id: 4,
+    type: "art",
+    name: "Art",
+    icon: "/icons/edit.svg",
+    kind: "folder",
+    changePermission: "denied",
+    children: [
+        {
+            id: 1,
+            name: "cute-elephant.png",
+            icon: "/images/image.png",
+            kind: "file",
+            changePermission: "denied",
+            fileType: "img",
+            // position: "top-10 left-10",
+            imageUrl: "/meimg/elephant.png",
+        },
+        {
+            id: 2,
+            name: "cat.png",
+            icon: "/images/image.png",
+            kind: "file",
+            changePermission: "denied",
+            fileType: "img",
+            // position: "top-40 left-80",
+            imageUrl: "/meimg/neko.png",
+        },
+
+        {
+            id: 5,
+            name: "engineer-penguin.png",
+            icon: "/images/image.png",
+            kind: "file",
+            changePermission: "denied",
+            fileType: "img",
+            // position: "top-40 left-80",
+            imageUrl: "/meimg/pengu.png",
+        },
+        {
+            id: 6,
+            name: "sketch.png",
+            icon: "/images/image.png",
+            kind: "file",
+            changePermission: "denied",
+            fileType: "img",
+            // position: "top-40 left-80",
+            imageUrl: "/meimg/sk.png",
+        },
+        {
+            id: 7,
+            name: "BE.png",
+            icon: "/images/image.png",
+            kind: "file",
+            changePermission: "denied",
+            fileType: "img",
+            // position: "top-40 left-80",
+            imageUrl: "/meimg/billie.png",
+        },
+    ],
+};
+
+
+const TRASH_LOCATION = {
+    id: 5,
     type: "trash",
     name: "Trash",
     icon: "/icons/trash.svg",
@@ -502,32 +567,56 @@ const TRASH_LOCATION = {
     changePermission: "denied",
     children: [
         {
-            id: 1,
-            name: "trash1.png",
-            icon: "/images/image.png",
-            kind: "file",
-            changePermission: "denied",
-            fileType: "img",
-            // position: "top-10 left-10",
-            imageUrl: "/images/trash-1.png",
-        },
-        {
             id: 2,
-            name: "trash2.png",
+            name: "cat.png",
             icon: "/images/image.png",
             kind: "file",
             changePermission: "denied",
             fileType: "img",
             // position: "top-40 left-80",
-            imageUrl: "/images/trash-2.png",
+            imageUrl: "/meimg/neko.png",
+        },
+        {
+            id: 3,
+            name: "oh-dear.png",
+            icon: "/images/image.png",
+            kind: "file",
+            changePermission: "denied",
+            fileType: "img",
+            // position: "top-40 left-80",
+            imageUrl: "/meimg/dear.png",
+        },
+        {
+            id: 4,
+            name: "peahen.png",
+            icon: "/images/image.png",
+            kind: "file",
+            changePermission: "denied",
+            fileType: "img",
+            // position: "top-40 left-80",
+            imageUrl: "/meimg/peahen.png",
+        },
+
+        {
+            id: 6,
+            name: "duck.png",
+            icon: "/images/image.png",
+            kind: "file",
+            changePermission: "denied",
+            fileType: "img",
+            // position: "top-40 left-80",
+            imageUrl: "/meimg/duck.png",
         },
     ],
 };
+
+
 
 export const locations = {
     work: WORK_LOCATION,
     about: ABOUT_LOCATION,
     resume: RESUME_LOCATION,
+    art: ART_LOCATION,
     trash: TRASH_LOCATION,
 };
 

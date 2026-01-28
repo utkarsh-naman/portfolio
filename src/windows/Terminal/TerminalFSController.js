@@ -1,33 +1,36 @@
-export const fileSystem = {
-    name: "/",
-    type: "dir",
-    children: {
-        Users: {
-            type: "dir",
-            children: {
-                utnam: {
-                    type: "dir",
-                    children: {
-                        projects: {
-                            type: "dir",
-                            children: {}
-                        },
-                        skills: {
-                            type: "dir",
-                            children: {}
-                        },
-                        "about.txt": {
-                            type: "file",
-                            content: "Hi, I’m Utkarsh 👋"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
+import { locations } from "#constants/index.js";
+import { locationsToFileSystem } from "#utils/locationToFS.js";
 
+// export const fileSystem = {
+//     name: "/",
+//     type: "dir",
+//     children: {
+//         Users: {
+//             type: "dir",
+//             children: {
+//                 utnam: {
+//                     type: "dir",
+//                     children: {
+//                         projects: {
+//                             type: "dir",
+//                             children: {}
+//                         },
+//                         skills: {
+//                             type: "dir",
+//                             children: {}
+//                         },
+//                         "about.txt": {
+//                             type: "file",
+//                             content: "Hi, I’m Utkarsh 👋"
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// };
 
+export const fileSystem = locationsToFileSystem(locations);
 
 // export function resolvePath(cwd, path) {
 //     if (!path || path === ".") return cwd;

@@ -4,6 +4,7 @@ import Resume from "#windows/Resume/Resume.jsx"
 import Contact from "#windows/Contact/Contact.jsx"
 import Finder from "#windows/Finder/Finder.jsx"
 import Text from "#windows/Text.jsx"
+import Image from "#windows/Image.jsx"
 
 
-export {Terminal, Safari, Resume, Contact, Finder, Text};
+export {Terminal, Safari, Resume, Contact, Finder, Text, Image};

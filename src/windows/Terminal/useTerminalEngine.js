@@ -109,6 +109,49 @@ export function useTerminalEngine() {
         });
     };
 
+
+
+    function parseArgs(input) {
+        const args = [];
+        let current = "";
+        let inQuotes = false;
+        let quoteChar = "";
+
+        for (let i = 0; i < input.length; i++) {
+            const char = input[i];
+
+            if ((char === '"' || char === "'")) {
+                if (!inQuotes) {
+                    inQuotes = true;
+                    quoteChar = char;
+                    continue;
+                }
+
+                if (char === quoteChar) {
+                    inQuotes = false;
+                    quoteChar = "";
+                    continue;
+                }
+            }
+
+            if (char === " " && !inQuotes) {
+                if (current) {
+                    args.push(current);
+                    current = "";
+                }
+                continue;
+            }
+
+            current += char;
+        }
+
+        if (current) args.push(current);
+
+        return args;
+    }
+
+
+
     const runCommand = (input) => {
         if (!input.trim()) return;
 
@@ -116,7 +159,9 @@ export function useTerminalEngine() {
         push(`${makePrompt(cwd)} ${input}`);
         saveCommand(input);
         setHistoryIndex(null); // reset navigation after execution
-        const [command, ...rawArgs] = input.trim().split(" ");
+        const tokens = parseArgs(input.trim());
+        const command = tokens[0];
+        const rawArgs = tokens.slice(1);
 
         // Normalize args (~ support)
         const args = rawArgs.map(arg =>
@@ -138,7 +183,14 @@ export function useTerminalEngine() {
                     push("ls: not a directory");
                     return;
                 }
-                push(Object.keys(node.children).join("  "));
+
+
+                const output = Object.keys(node.children)
+                    .map(name => `'${name}'`)
+                    .join(" ");
+
+
+                push(output);
                 break;
             }
 

@@ -3,7 +3,7 @@ import BootScreen from "./components/BootScreen";
 import WelcomeScreen from "./components/WelcomeScreen";
 import { audioUnlocked } from "./hooks/useAudioUnlock";
 import { Navbar, Dock } from "#components";
-import {Safari, Terminal, Resume, Contact, Finder, Text} from "#windows";
+import {Safari, Terminal, Resume, Contact, Finder, Text, Image} from "#windows";
 
 const App = () => {
     const [stage, setStage] = useState("boot");
@@ -39,6 +39,7 @@ const App = () => {
                     <Contact/>
                     <Finder/>
                     <Text/>
+                    <Image/>
                 </main>
             )}
         </>

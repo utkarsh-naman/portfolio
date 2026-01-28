@@ -23,9 +23,9 @@ const Text = () => {
             </div>
 
             {/* ───── Body ───── */}
-            <div className="p-6 space-y-4">
+            <div className="txt-body p-6 space-y-4">
                 {image ? (
-                    <div className={""}>
+                    <div className={"w-full"}>
                         <img src={image} alt={name} className={"w-full h-auto rounded"} />
                     </div>
                 ): null}
