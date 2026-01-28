@@ -312,6 +312,8 @@ body {
         min-width: 50vw;
         min-height: 50vh;
         max-height: 100vh;
+        height: 70vh;
+        width: 50vw;
 
         .search {
             @apply flex items-center gap-3 w-3/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
@@ -327,7 +329,7 @@ body {
     #terminal {
         @apply w-xl absolute top-32 left-1/12 bg-[var(--window-color)] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
 
-        min-height: 320px;
+        min-height: 45vw;
         max-height: 100vh;
         min-width: 30vw;
 
@@ -469,8 +471,8 @@ body {
         min-height: 40vh;
         max-height: 100vh;
 
-        width: 50vw;
-        height: 80vh;
+        width: 30vh;
+        height: 85vh;
     }
 
     /* 👇 THIS is the key */

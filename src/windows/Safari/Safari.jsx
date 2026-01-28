@@ -142,7 +142,7 @@ const Safari = () => {
             </div>
         </div>
 
-        <div className="safari-body relative">
+        <div className="flex safari-body relative">
             <article
                 className="readme-content"
                 dangerouslySetInnerHTML={{ __html: readmeHtml }}
