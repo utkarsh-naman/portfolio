@@ -3,7 +3,7 @@ import NotificationPanel from "./NotificationPanel";
 import "./notchNook.css";
 
 const API_URL = "https://utkarsh-naman.github.io/repo-updates/get-updates.json";
-const POLL_INTERVAL = 60000;
+const POLL_INTERVAL = 15000;
 
 export default function NotchNook() {
     // UI States
