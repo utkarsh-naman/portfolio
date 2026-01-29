@@ -599,10 +599,10 @@ body {
 
     #home {
         @apply relative z-0 max-sm:hidden;
-
+        user-select: none;
         ul {
             li {
-                @apply absolute z-0 select-none flex items-center flex-col;
+                @apply relative z-0 select-none flex items-center flex-col gap-1;
 
                 img {
                     @apply group-hover:bg-gray-950/10 p-1 rounded-md;
@@ -613,5 +613,18 @@ body {
                 }
             }
         }
+    }
+
+    #home .homeFolderCont{
+        display: flex;
+        flex-direction: column;
+
+        /* ADDED: Spacing between folder items */
+        gap: 2rem;
+
+        /* ADDED: Position the entire list on the 'desktop' */
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
     }
 }

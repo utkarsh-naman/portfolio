@@ -50,12 +50,12 @@ const dockApps = [
         icon: "/applogos/safari.png",
         canOpen: true,
     },
-    {
-        id: "photos",
-        name: "Gallery", // was "Photos"
-        icon: "/applogos/photos.png",
-        canOpen: true,
-    },
+    // {
+    //     id: "photos",
+    //     name: "Gallery", // was "Photos"
+    //     icon: "/applogos/photos.png",
+    //     canOpen: true,
+    // },
     {
         id: "contact",
         name: "Contact", // or "Get in touch"
@@ -74,12 +74,12 @@ const dockApps = [
         icon: "/applogos/terminal.png",
         canOpen: true,
     },
-    {
-        id: "settings",
-        name: "Settings", // was "Trash"
-        icon: "/applogos/settings.png",
-        canOpen: true,
-    },
+    // {
+    //     id: "settings",
+    //     name: "Settings", // was "Trash"
+    //     icon: "/applogos/settings.png",
+    //     canOpen: true,
+    // },
     {
         id: "trash",
         name: "Trash", // was "Trash"
