@@ -462,7 +462,7 @@ const ABOUT_LOCATION = {
             fileType: "txt",
             // position: "top-60 left-5",
             subtitle: "Yo! found me huh?",
-            image: "/meimg/project-3T.png",
+            image: "/meimg/img.png",
             description: [
                 "I am Utkarsh Naman aka UtNam",
                 "I solve problems that either bug me or I wonder how was it implemented.",
