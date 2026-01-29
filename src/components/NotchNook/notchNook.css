@@ -1,0 +1,521 @@
+/*!* src/components/NotchNook/notchNook.css *!*/
+
+/*.notch-nook {*/
+/*    position: fixed;*/
+/*    !*top: 6px;*!*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*    height: 40px;*/
+/*    min-width: 140px;*/
+/*    background: black;*/
+/*    border-radius: 25px;*/
+/*    color: white;*/
+/*    font-size: 12px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    z-index: 9999;*/
+/*    transition: all 0.3s ease;*/
+/*    cursor: pointer;*/
+/*    padding-left: 15px;*/
+/*    padding-right: 15px;*/
+/*}*/
+
+/*.notch-nook.expanded {*/
+/*    height: 44px;*/
+/*    min-width: 320px;*/
+/*    border-radius: 22px;*/
+/*}*/
+
+/*.notch-content span {*/
+/*    margin: 0 6px;*/
+/*    opacity: 0.9;*/
+/*}*/
+
+/*.notch-content .idle {*/
+/*    opacity: 0.6;*/
+/*}*/
+
+/*!* Panel *!*/
+
+/*.notification-backdrop {*/
+/*    position: fixed;*/
+/*    inset: 0;*/
+/*    background: rgba(0, 0, 0, 0.25);*/
+/*    z-index: 10000;*/
+/*}*/
+
+/*.notification-panel {*/
+/*    user-select: none;*/
+/*    position: absolute;*/
+/*    top: 52px;*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*    width: 360px;*/
+
+/*    max-height: 30vh;            !* ✅ NEW *!     !* ✅ NEW *!*/
+
+/*    background: #111;*/
+/*    border-radius: 12px;*/
+/*    color: white;*/
+/*    padding: 10px;*/
+/*}*/
+/*.notification-list {*/
+/*    max-height: calc(30vh - 42px); !* header height *!*/
+/*    overflow-y: auto;*/
+/*    padding-right: 4px;*/
+/*}*/
+/*!* ===== Scrollbar styling ===== *!*/
+
+/*!* WebKit (Chrome, Edge, Safari) *!*/
+/*.notification-panel::-webkit-scrollbar {*/
+/*    width: 6px;*/
+/*}*/
+
+/*.notification-panel::-webkit-scrollbar-track {*/
+/*    background: transparent;*/
+/*}*/
+
+/*.notification-panel::-webkit-scrollbar-thumb {*/
+/*    background: rgba(255, 255, 255, 0.18);*/
+/*    border-radius: 6px;*/
+/*}*/
+
+/*.notification-panel::-webkit-scrollbar-thumb:hover {*/
+/*    background: rgba(255, 255, 255, 0.3);*/
+/*}*/
+
+/*!* Firefox *!*/
+/*.notification-panel {*/
+/*    scrollbar-width: thin;*/
+/*    scrollbar-color: rgba(255, 255, 255, 0.25) transparent;*/
+/*}*/
+
+
+
+/*.notification-panel header {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    margin-bottom: 8px;*/
+/*}*/
+
+/*.notification-panel header button {*/
+/*    background: none;*/
+/*    color: #888;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.notification {*/
+/*    position: relative;*/
+/*    padding: 10px;*/
+/*    background: #1b1b1b;*/
+/*    border-radius: 8px;*/
+/*    margin-bottom: 8px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.notification:hover {*/
+/*    background: #222;*/
+/*}*/
+
+/*.notification .close {*/
+/*    position: absolute;*/
+/*    right: 6px;*/
+/*    top: 6px;*/
+/*    background: none;*/
+/*    border: none;*/
+/*    color: #666;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.empty {*/
+/*    text-align: center;*/
+/*    color: #777;*/
+/*    padding: 20px;*/
+/*}*/
+
+
+/* src/components/NotchNook/notchNook.css */
+
+/* src/components/NotchNook/notchNook.css */
+
+/*.notch-nook {*/
+/*    position: fixed;*/
+/*    top: 6px;*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*    height: 40px;*/
+/*    min-width: 140px;*/
+/*    background: black;*/
+/*    border-radius: 25px;*/
+/*    color: white;*/
+/*    font-size: 13px; !* Slightly larger for readability *!*/
+/*    font-weight: 500;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    z-index: 9999;*/
+/*    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); !* Apple-like ease *!*/
+/*    cursor: pointer;*/
+/*    padding: 0 16px;*/
+/*    box-shadow: 0 4px 12px rgba(0,0,0,0.12);*/
+/*}*/
+
+/*.notch-nook.expanded {*/
+/*    height: 44px;*/
+/*    min-width: 320px;*/
+/*    border-radius: 22px;*/
+/*}*/
+
+/*!* Hide nook completely if empty and not expanded *!*/
+/*.notch-nook.hidden {*/
+/*    transform: translateX(-50%) scale(0.8);*/
+/*    opacity: 0;*/
+/*    pointer-events: none;*/
+/*}*/
+
+/*.notch-content {*/
+/*    display: flex;*/
+/*    gap: 8px; !* Space between summary items *!*/
+/*    align-items: center;*/
+/*}*/
+
+/*.notch-content span {*/
+/*    white-space: nowrap;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.notch-content .idle {*/
+/*    opacity: 0.6;*/
+/*}*/
+
+/*!* --- Panel --- *!*/
+
+/*.notification-backdrop {*/
+/*    position: fixed;*/
+/*    inset: 0;*/
+/*    background: rgba(0, 0, 0, 0.2);*/
+/*    z-index: 9998;*/
+/*}*/
+
+/*.notification-panel {*/
+/*    user-select: none;*/
+/*    position: absolute;*/
+/*    top: 54px;*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*    width: 360px;*/
+
+/*    !* Dynamic height calculation *!*/
+/*    max-height: 50vh;*/
+
+/*    background: #111;*/
+/*    border-radius: 14px;*/
+/*    color: white;*/
+/*    padding: 12px;*/
+/*    box-shadow: 0 10px 40px rgba(0,0,0,0.4);*/
+/*    border: 1px solid rgba(255,255,255,0.08);*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+
+/*.notification-panel header {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    margin-bottom: 12px;*/
+/*    padding: 0 4px;*/
+/*    flex-shrink: 0;*/
+/*}*/
+
+/*.notification-panel header span {*/
+/*    font-weight: 600;*/
+/*    font-size: 14px;*/
+/*}*/
+
+/*.notification-panel header button {*/
+/*    background: none;*/
+/*    color: #888;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*    font-size: 12px;*/
+/*    padding: 4px 8px;*/
+/*    border-radius: 4px;*/
+/*    transition: all 0.2s;*/
+/*}*/
+
+/*.notification-panel header button:hover {*/
+/*    background: rgba(255,255,255,0.1);*/
+/*    color: white;*/
+/*}*/
+
+/*.notification-list {*/
+/*    overflow-y: auto;*/
+/*    padding-right: 4px;*/
+/*    !* Ensure list takes remaining space but doesn't overflow panel *!*/
+/*    flex-grow: 1;*/
+/*}*/
+
+/*!* Scrollbar *!*/
+/*.notification-list::-webkit-scrollbar { width: 4px; }*/
+/*.notification-list::-webkit-scrollbar-track { background: transparent; }*/
+/*.notification-list::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }*/
+/*.notification-list::-webkit-scrollbar-thumb:hover { background: #666; }*/
+
+/*.notification {*/
+/*    position: relative;*/
+/*    padding: 12px;*/
+/*    background: #1c1c1c;*/
+/*    border-radius: 10px;*/
+/*    margin-bottom: 8px;*/
+/*    cursor: pointer;*/
+/*    transition: background 0.2s;*/
+/*    border: 1px solid rgba(255,255,255,0.05);*/
+/*}*/
+
+/*.notification:hover {*/
+/*    background: #2a2a2a;*/
+/*}*/
+
+/*.notification strong {*/
+/*    display: block;*/
+/*    font-size: 13px;*/
+/*    margin-bottom: 4px;*/
+/*    color: #fff;*/
+/*}*/
+
+/*.notification p {*/
+/*    margin: 0;*/
+/*    font-size: 12px;*/
+/*    color: #aaa;*/
+/*    line-height: 1.4;*/
+/*}*/
+
+/*.notification .close {*/
+/*    position: absolute;*/
+/*    right: 8px;*/
+/*    top: 8px;*/
+/*    background: none;*/
+/*    border: none;*/
+/*    color: #555;*/
+/*    cursor: pointer;*/
+/*    padding: 4px;*/
+/*    line-height: 1;*/
+/*    border-radius: 50%;*/
+/*}*/
+
+/*.notification .close:hover {*/
+/*    background: rgba(255,255,255,0.1);*/
+/*    color: #fff;*/
+/*}*/
+
+/*.empty {*/
+/*    text-align: center;*/
+/*    color: #666;*/
+/*    padding: 30px 0;*/
+/*    font-size: 13px;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* src/components/NotchNook/notchNook.css */
+
+:root {
+    --notch-bg: #000;
+    --notch-radius: 20px; /* The roundness of the bottom corners */
+    --curve-size: 20px;   /* How "wide" the melt curve is */
+}
+
+.notch-nook {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: var(--notch-bg);
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    z-index: 9999;
+    cursor: pointer;
+
+    /* Base Shape (attached to top) */
+    height: 34px;        /* Height of a standard MacBook notch */
+    min-width: 180px;    /* Slightly wider than the hardware notch */
+
+    /* Round the bottom, keep top flat */
+    border-bottom-left-radius: var(--notch-radius);
+    border-bottom-right-radius: var(--notch-radius);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    /* Flex Layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+
+    /* The Smooth "Apple-like" Spring Animation */
+    transition:
+            min-width 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+            height 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+            transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+            opacity 0.3s ease;
+
+    /*box-shadow: 0 5px 10px rgba(0,0,0,0.5);*/
+}
+
+/* --- THE LIQUID CURVES (Inverted Radius) --- */
+/* These create the smooth scoop where the notch meets the top bezel */
+.notch-nook::before,
+.notch-nook::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: var(--curve-size);
+    height: var(--curve-size);
+    background: transparent;
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Left Curve */
+.notch-nook::before {
+    left: calc(var(--curve-size) * -1); /* Move left by width */
+    /* The magic: A shadow creates the "fill", the radius cuts it */
+    border-top-right-radius: 50%;
+    box-shadow: 10px -10px 0 0 var(--notch-bg); /* Shadow pushes UP and RIGHT to fill the corner */
+}
+
+/* Right Curve */
+.notch-nook::after {
+    right: calc(var(--curve-size) * -1);
+    border-top-left-radius: 50%;
+    box-shadow: -10px -10px 0 0 var(--notch-bg);
+}
+
+
+/* --- STATES --- */
+
+/* 1. EXPANDED (Hover or Notification) */
+.notch-nook.expanded {
+    height: 64px;       /* Grows taller */
+    min-width: 360px;   /* Grows wider */
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+/* 2. HIDDEN (No notifications) */
+/* It shrinks up into the bezel and vanishes */
+.notch-nook.hidden {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 0;
+}
+
+
+/* --- CONTENT FADE --- */
+.notch-content {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.2s ease 0.1s; /* Slight delay so shape moves first */
+}
+
+/* Hide content immediately if we are hiding the notch */
+.notch-nook.hidden .notch-content {
+    opacity: 0;
+    transition: none;
+}
+
+.notch-content .idle {
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+
+/* --- PANEL ADJUSTMENTS --- */
+/* The panel needs to sit below the new notch position */
+
+.notification-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1); /* Lighter backdrop */
+    z-index: 9998;
+}
+
+.notification-panel {
+    position: absolute;
+    /* Pushed down further because the notch is at top:0 */
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 360px;
+    max-height: 50vh;
+    background: #000000;
+    border-radius: 18px;
+    color: white;
+    padding: 16px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+/* (The rest of the Panel CSS is the same as before) */
+.notification-panel header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.notification-panel header span { font-weight: 600; font-size: 14px; margin-left: 4px;}
+.notification-panel header button {
+    background: rgba(255,255,255,0.1);
+    color: #ddd;
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+.notification-panel header button:hover { background: rgba(255,255,255,0.2); color: #fff; }
+
+.notification-list { overflow-y: auto; padding-right: 4px; }
+.notification-list::-webkit-scrollbar { width: 4px; }
+.notification-list::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+
+.notification {
+    position: relative;
+    padding: 14px;
+    background: #252525;
+    border-radius: 14px; /* Softer corners */
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+.notification:active { transform: scale(0.98); }
+.notification:hover { background: #333; }
+.notification strong { display: block; font-size: 13px; margin-bottom: 4px; color: #fff; }
+.notification p { margin: 0; font-size: 12px; color: #aaa; line-height: 1.4; }
+.notification .close {
+    position: absolute;
+    right: 10px; top: 10px;
+    background: transparent; border: none; color: #666; cursor: pointer;
+}
+.notification .close:hover { color: #fff; }
+.empty { text-align: center; color: #666; padding: 30px 0; font-size: 13px; }

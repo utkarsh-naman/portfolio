@@ -4,6 +4,8 @@ import WelcomeScreen from "./components/WelcomeScreen";
 import { audioUnlocked } from "./hooks/useAudioUnlock";
 import { Navbar, Dock, Home } from "#components";
 import {Safari, Terminal, Resume, Contact, Finder, Text, Image} from "#windows";
+import NotchNook from "./components/NotchNook/NotchNook";
+
 
 const App = () => {
     const [stage, setStage] = useState("boot");
@@ -31,6 +33,7 @@ const App = () => {
 
             {stage === "desktop" && (
                 <main>
+                    <NotchNook />
                     <Navbar />
                     <Dock />
                     <Terminal />
