@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import NotificationPanel from "./NotificationPanel";
 import "./notchNook.css";
 
-const API_URL = "https://utkarsh-naman.github.io/repo-updates/get-updates.json";
+const API_URL = "https://repo-updates.pages.dev/get-updates.json";
 const POLL_INTERVAL = 15000;
 
 export default function NotchNook() {
