@@ -387,7 +387,7 @@ const WORK_LOCATION = {
                     kind: "file",
                     changePermission: "denied",
                     fileType: "site",
-                    href: "https://github.com/utkarsh-naman/3T",
+                    href: "https://utkarsh-naman.github.io/3T/",
                     // position: "top-10 right-20",
                 },
                 {
@@ -462,7 +462,7 @@ const ABOUT_LOCATION = {
             fileType: "txt",
             // position: "top-60 left-5",
             subtitle: "Yo! found me huh?",
-            image: "/meimg/img.png",
+            image: "/meimg/project-3T.png",
             description: [
                 "I am Utkarsh Naman aka UtNam",
                 "I solve problems that either bug me or I wonder how was it implemented.",
