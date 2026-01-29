@@ -32,7 +32,7 @@ const useWindowStore = create(
             win.isOpen = false;
             win.zIndex = INITIAL_Z_INDEX;
             win.isMinimized = true;
-            win.data = null;
+            // win.data = null;
         })),
         maximizeWindow: (windowKey) => set((state =>{
             const win = state.windows[windowKey];

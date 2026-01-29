@@ -25,8 +25,7 @@ const WindowWrapper = (Component, windowKey) => {
         // 1. OPENING LOGIC
         // ----------------------------------------------------
         // ----------------------------------------------------
-// 1. OPENING LOGIC
-// ----------------------------------------------------
+
         useGSAP(() => {
             const el = ref.current;
             if (!el || !isOpen) return;

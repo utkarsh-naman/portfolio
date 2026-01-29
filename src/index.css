@@ -383,7 +383,7 @@ body {
         min-width: 35vw;
         min-height: 40vh;
         max-height: 100vh;
-
+        max-width: 100vw;
         width: 30vh;
         height: fit-content;
         h2 {
