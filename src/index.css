@@ -472,7 +472,7 @@ body {
     }
 
     #resume {
-        @apply absolute right-15 bg-[var(--window-color)] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col ;
+        @apply absolute left-85 bg-[var(--window-color)] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col ;
 
         min-width: 35vw;
         min-height: 40vh;
