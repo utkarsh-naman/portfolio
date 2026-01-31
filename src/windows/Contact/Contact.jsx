@@ -89,7 +89,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-                //patreon
+                
                 <div
                     className="contact-card premium-card"
                     onClick={() =>
