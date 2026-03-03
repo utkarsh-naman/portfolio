@@ -33,7 +33,7 @@ const Contact = () => {
                     <div className="contact-main">
                         <h1 className="contact-name">Utkarsh Naman</h1>
                         <p className="contact-meta">
-                            22 years old (Born: January 23, 2004)
+                            22 years old 
                         </p>
 
                         {/* Action Icons */}
@@ -74,8 +74,8 @@ const Contact = () => {
                     className="contact-card github-card"
                     onClick={() =>
                         window.open(
-                            "https://github.com/utkarsh-naman/portfolio",
-                            "_blank"
+                            "https://github.com/utkarsh-naman/iredactpdf",
+                            "https://iredactpdf.utnam.im"
                         )
                     }
                 >
@@ -112,7 +112,7 @@ const Contact = () => {
                 <div className="contact-details">
                     <div className="detail-row">
                         <span>Phone</span>
-                        <span>+91 77599 10474</span>
+                        <span>+91 XXXXXXXXXX</span>
                     </div>
 
                     <div className="detail-row">
